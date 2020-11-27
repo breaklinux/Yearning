@@ -10,7 +10,6 @@ RUN apk update && \
   rm -rf /var/lib/apt/lists/* && \
   rm /var/cache/apk/*
 
-
 WORKDIR /WORKSPACE
 
 RUN wget https://github.com/cookieY/Yearning/releases/download/v${VERSION}/Yearning-${SMALL_VERSION}-linux-amd64.zip -O /tmp/Yearning.zip && \
@@ -19,7 +18,6 @@ RUN wget https://github.com/cookieY/Yearning/releases/download/v${VERSION}/Yearn
   mv /tmp/Yearning-go/conf.toml /WORKSPACE/ && \
   rm -rf /tmp/*
   
-
 EXPOSE 8000
 
 ENTRYPOINT  ["/WORKSPACE/Yearning"]
